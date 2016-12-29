@@ -6,7 +6,7 @@ import org.gradle.api.DefaultTask
 import org.gradle.api.GradleException
 import org.gradle.api.tasks.TaskAction
 
-import static com.thisisglobal.plugins.gradle.android.instrumentation.animation_disabler.ProcessHelper.runWithLogger
+import static pl.com.andruszko.plugins.android_animation_disabler.ProcessHelper.runWithLogger
 
 class DisableAnimationTask extends DefaultTask {
 

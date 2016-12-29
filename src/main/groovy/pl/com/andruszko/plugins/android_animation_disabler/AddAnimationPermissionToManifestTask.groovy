@@ -15,7 +15,8 @@ class AddAnimationPermissionToManifestTask extends DefaultTask {
     }
 
     void copyAndReplaceText(File source, File dest) {
-        String output = source.text.replace('<!-- ANIMATION_SCALE_INJECTION_PLACE -->', '<uses-permission android:name="android.permission.SET_ANIMATION_SCALE"/>');
+        project.logger.info("INVOKING TEST $variant.name")
+        String output = source.text.replace('</manifest>', '<uses-permission android:name="android.permission.SET_ANIMATION_SCALE"/></manifest>');
         dest.write(output);
         if (output.contains('SET_ANIMATION_SCALE')) {
             project.logger.info("SUCCESS the SET_ANIMATION_SCALE permission for $variant.name")

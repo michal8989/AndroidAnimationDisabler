@@ -23,7 +23,7 @@ class AnimationDisablerPlugin implements Plugin<Project> {
                             type: DisableAnimationTask,
                             dependsOn: "install${variant.name.capitalize()}"
                     )
-                    disableAnimationTask.variant = variant;
+                    disableAnimationTask.variant = variant
 
                     // Adding task dependency, assemble will run only when we disable animations.
                     project.tasks
@@ -36,7 +36,7 @@ class AnimationDisablerPlugin implements Plugin<Project> {
                             type: AddAnimationPermissionToManifestTask,
                             dependsOn: "process${variant.name.capitalize()}Manifest"
                     )
-                    addAnimationPermissionToManifestTask.variant = variant;
+                    addAnimationPermissionToManifestTask.variant = variant
 
                     // We are adding premission to Manifest only when it is generated and ready to make any changes.
                     project.tasks
